@@ -1,5 +1,8 @@
 # DBC-highlights
-Select projects from my nine weeks of on-site Dev Bootcamp. All projects are copied from the cohort's private repository, which is representative of my GitHub activity from May thru August 2016. Some of the learning exercises were pair-programmed or group projects, but a majority are all solo work. Below accounts for (a very rough estimate of) 50% of the drills and exercises accomplised at DBC.
+##Select projects from my nine weeks of on-site at Dev Bootcamp. 
+* All projects are copied from the cohort's private repository, and are representative of my GitHub activity from June thru August of 2016. 
+* Some of the learning exercises were pair-programmed or group projects, but a majority are all solo work. 
+* Below accounts for (a very rough estimate of) 50% of the drills and exercises accomplised at DBC during those 9-weeks.
 
 ##Algorithm Work
 >* [Boggle](./week-1/boggle) `complex boardgame logic`, `recursion`, `ruby classes/OOP`, `terminal output UX/UI`
@@ -12,12 +15,14 @@ Select projects from my nine weeks of on-site Dev Bootcamp. All projects are cop
 >* [Binary Search](./week-1/binary_search) * `recursion`, `rspec`
 >* [Anagrams](./week-1/anagrams) `rspec`
 >* [Prime Factors](./week-1/prime_factors) `rescursion`, `yield statements`, `rspec`
+
 ---
 
 ##Core Competencies
 >* [Nested Data](./week-1/nested_arrays) `nested data structures`, `rspec`
 >* [Enumerables](./week-1/basic_enumerables) `enumerables`
 >* [Inheritence](./week-2/classical-inheritence) `inheritence`, `OOP`
+
 ---
 
 ##Parsing & Web Scraping
@@ -25,11 +30,13 @@ Select projects from my nine weeks of on-site Dev Bootcamp. All projects are cop
 >* [Command Line Todo](./week-2/basic-todo) `OO design`, `rspec`
 >* [Hacker News](./week-2/web-scraping) `Nokogiri`, `OOP`, `rspec`
 >* [World's Simplest Browser](./week-2/browser) `Nokogiri`, `URI class parsing`
+
 ---
 
 ## Object Oriented Programming
 >* [Orange Trees](./week-2/orange-trees-1) `OO design`, `rspec`
->* [Ruby Falshcards](./week-2/flashcards) `OOP and design`, `rspec`
+>* [Ruby Flashcards](./week-2/flashcards) `OOP and design`, `rspec`
+
 ---
 
 ## Cumulative Assessments
