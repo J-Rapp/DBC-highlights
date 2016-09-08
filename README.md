@@ -6,8 +6,13 @@
 
 ---
 
-##Front-end
->* [Mini-Twitter](./week-8/mini-twitter) `AJAX`, `jQuery`, `object-oriented javascript`
+##Full-stack / CRUD
+>* [Competition Tracker](./week-7/competition-tracker) `user authentication`, `CRUD`
+
+---
+
+##Front-end / Javascript
+>* [Mini-Twitter](./week-8/mini-twitter) `AJAX`, `jQuery`, `asynchronous, object-oriented javascript`
 >* [2048 Clone](./week-8/256-challenge) `complex boardgame logic`, `object-oriented javascript`, `jasmine`
 >* [Simple Markdown Converter] (./week-8/markdown-widget) `object-oriented javascript`, `jasmine`
 

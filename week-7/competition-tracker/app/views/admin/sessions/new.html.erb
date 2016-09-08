@@ -1,0 +1,29 @@
+<h1>Admin Log In</h1>
+
+<%= session.delete(:flash) if session[:flash] %>
+
+<div id="main-login-form">
+  <%= form_for @login_form, url: {action: 'create'} do |form| %>
+
+    <div class="login-form-field">
+      <%= form.label :username %>
+      <%= form.text_field :username %>
+      <% if @login_form.errors[:username].empty? == false %>
+        <div class="error-message"><%= @login_form.errors[:username].first %></div>
+      <% end %>
+    </div>
+
+    <div class="login-form-field">
+      <%= form.label :password %>
+      <%= form.password_field :password %>
+      <% if @login_form.errors[:password].empty? == false %>
+        <div class="error-message"><%= @login_form.errors[:password].first %></div>
+      <% end %>
+    </div>
+
+    <div class="login-submit">
+      <%= form.submit "Log In", :class => 'submit-buttons' %>
+    </div>
+
+  <% end %>
+</div>

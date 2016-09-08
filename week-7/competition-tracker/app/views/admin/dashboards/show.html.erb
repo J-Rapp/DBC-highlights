@@ -1,0 +1,96 @@
+<%= render 'admin/homepage_logout_nav_bar' %>
+
+<h1>Greetings, Commissioner</h1>
+<hr>
+<div id="update-rounds">
+  <h2>Rounds this season:</h2>
+  <p id="rounds"><%= @league1.number_of_rounds %> rounds</p>
+  <%= form_for admin_dashboard_path, method: :put do |form| %>
+    <%= form.label :rounds %>
+    <%= form.text_field :rounds, id: 'new-number-of-rounds' %>
+    <%= form.submit "Update number of rounds", :class => 'submit-buttons' %>
+  <% end %>
+</div>
+<hr>
+<div id="dashboard-league">
+<h2>Current Leagues:</h2>
+  <div class="league-column">
+    <h3><%= @league1.name %></h3>
+    <%= content_tag(:ul) do %>
+      <% @league1.competitors.each do |competitor| %>
+        <%= content_tag(:li, competitor.name) %>
+        <% end %>
+    <% end %>
+    <%= button_to "Update #{@league1.name}", admin_league_path(@league1), method: :get, :class => 'submit-buttons' %>
+  </div>
+  <div class="league-column">
+    <h3><%= @league2.name %></h3>
+    <%= content_tag(:ul) do %>
+      <% @league2.competitors.each do |competitor| %>
+        <%= content_tag(:li, competitor.name) %>
+        <% end %>
+    <% end %>
+    <%= button_to "Update #{@league2.name}", admin_league_path(@league2), method: :get, :class => 'submit-buttons' %>
+  </div>
+</div>
+<hr>
+<div id="leader-board">
+<h2>Current Leaders:</h2>
+  <div class="league-column">
+  <%= @league1.current_leader.try(:name) %>
+  <p>Wins: <% if @league1.current_leader.try(:wins) %><%= @league1.current_leader.wins.count %><% end %></p>
+  </div>
+  <div class="league-column">
+  <%= @league2.current_leader.try(:name) %>
+  <p>Wins: <% if @league2.current_leader.try(:wins) %><%= @league2.current_leader.wins.count %><% end %></p>
+  </div>
+</div>
+<hr>
+<div id="matches">
+  <h2>All Matches</h2>
+  <div class="league-column">
+  <%= content_tag :h3, @league1.name %>
+  <%= button_to "Create a new match", new_admin_league_match_path(@league1), method: :get, :class => 'submit-buttons' %>
+  <% @league1.matches.each do |match| %>
+    <div class="match">
+      <p>Round: <%= match.round_number %></p>
+      <ul>
+      <% match.competitors.each do |competitor| %>
+        <li><%=competitor.name %>
+        <% if match.try(:winner) == competitor %>
+        (winner)
+        <% elsif match.try(:loser) == competitor %>
+        (loser)
+        <% else %>
+        <%= button_to "Declare Winner", admin_competitor_match_path(competitor, match), method: :put, :class => 'submit-buttons' %>
+        <% end %>
+        </li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  </div>
+  <div class="league-column">
+  <%= content_tag :h3, @league2.name %>
+  <%= button_to "Create a new match", new_admin_league_match_path(@league2), method: :get, :class => 'submit-buttons' %>
+  <% @league2.matches.each do |match| %>
+    <div class="match">
+      <p>Round: <%= match.round_number %></p>
+      <ul>
+      <% match.competitors.each do |competitor| %>
+        <li><%=competitor.name %>
+        <% if match.try(:winner) == competitor %>
+        (winner)
+        <% elsif match.try(:loser) == competitor %>
+        (loser)
+        <% else %>
+        <%= button_to "Declare Winner", admin_competitor_match_path(competitor, match), method: :put, :class => 'submit-buttons' %>
+        <% end %>
+        </li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  </div>
+</div>
+

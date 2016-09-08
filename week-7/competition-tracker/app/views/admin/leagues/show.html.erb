@@ -1,0 +1,49 @@
+<%= render 'admin/homepage_logout_nav_bar' %>
+
+<h1>Update <%= @league.name %></h1>
+
+<div id="update-league-name">
+<%= form_for admin_league_path(@league), method: :put do |form| %>
+
+<% if @league.errors.any? %>
+  <div>
+    <ul>
+    <% @league.errors.each do |attribute, message| %>
+      <li><%= message[:message] %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form.label :name %>
+<%= form.text_field :name, id: "league_name" %>
+
+<%= form.submit "Update League Name", :class => 'submit-buttons' %>
+
+<% end %>
+</div>
+
+<div id="update-league-players">
+  <h2>Current Players:</h2>
+  <%= content_tag(:ul) do %>
+    <% @league.competitors.each do |competitor| %>
+      <%= content_tag(:li) do %>
+        <%= content_tag(:div, competitor.name) %>
+
+        <%= form_for competitor, url: admin_league_competitor_path(@league, competitor) do |form| %>
+          <%= form.text_field :name, id: "update_competitor" %>
+          <%= form.submit "Rename", :class => 'submit-buttons' %>
+        <% end %>
+
+        <%= button_to "Delete", admin_league_competitor_path(@league, competitor), method: :delete, id: "delete-#{competitor.id}", :class => 'submit-buttons' %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <%= form_for :competitor, url: admin_league_competitors_path(@league) do |form| %>
+    <%= form.label :name %>
+    <%= form.text_field :name, id: "competitor_name" %>
+    <%= form.submit "Add Competitor", :class => 'submit-buttons' %>
+  <% end %>
+</div>
+

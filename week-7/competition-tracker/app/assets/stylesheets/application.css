@@ -1,0 +1,240 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/* * {
+  outline: 1px dotted red;
+}*/
+
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  font-family: Tahoma, sans-serif;
+}
+
+#main-header {
+  font-family: Papyrus, sans-serif;
+  font-size: 2.5em;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border-bottom-left-radius: 3em;
+  border-bottom-right-radius: 3em;
+  background-color: #fff5ba;
+  display: block;
+}
+
+#index-title {
+  color: #00402c;
+}
+
+.content-container {
+  margin: auto;
+  width: 80%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#table-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.league-table {
+  margin: auto;
+}
+
+.league-table, th, td {
+  border-collapse: collapse;
+  border: 1px solid #888888;
+}
+
+th {
+  color: #fff5ba;
+  background-color: #00402c;
+}
+
+tr:nth-child(even) {
+  background-color: #dbdddc;
+}
+
+.col-details {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+}
+
+.competitor-name {
+  text-align: left;
+  padding: 5px;
+}
+
+#league-A-container {
+  margin: 20px auto;
+  float: left;
+  width: 45%;
+}
+
+#league-B-container {
+  margin: 20px auto;
+  float: right;
+  width: 45%;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 25px;
+  clear: both;
+}
+
+#footer {
+  text-align: center;
+}
+
+/*----- ADMIN DASHBOARD ------*/
+
+#main-login-form {
+  text-align: left;
+  width: 60%;
+  margin: auto;
+}
+
+.login-form-field {
+  margin-bottom: 25px;
+}
+
+.login-form-field input {
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+
+.submit-buttons {
+  width: 150px;
+  height: 25px;
+  background-color: #fff5ba;
+  color: #6e1519;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+#dashboard-league {
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.league-column {
+  display: inline-block;
+  width: 300px;
+  padding: 5px;
+  vertical-align: top;
+}
+
+.league-column li {
+  text-align: left;
+  width: 300px;
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+#dashboard-link {
+  color: #fff5ba;
+  background-color: #6e1519;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.error-message {
+  color: #6e1519;
+  list-style: none;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+/*----- ADMIN UPDATE LEAGUE ------*/
+
+#update-league-name {
+  margin: 5px;
+}
+
+#update-league-players {
+  width: 80%;
+  display: block;
+  margin: 5px auto;
+}
+
+#update-league-players li {
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+#update-league-players button {
+  vertical-align: top;
+}
+
+#to-dashboard {
+  margin-top: 25px;
+}
+
+#create_match_form {
+  text-align: left;
+  width: 70%;
+  margin: auto;
+}
+
+.in_one_line_form {
+  display: inline-block;
+  width: 150px;
+}
+
+
+.match {
+  border-top: 1px solid gray;
+  margin-top: 10px;
+}
+
+#nav-bar-admin {
+  display: block;
+  float: right;
+  clear: both;
+}
+
+#homepage, #dashboard, #logout {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+h1 {
+  clear: both;
+}
+
+#index-title {
+  display: inline-block;
+}
+
+#fish {
+  float: left;
+  display: inline-block;
+}

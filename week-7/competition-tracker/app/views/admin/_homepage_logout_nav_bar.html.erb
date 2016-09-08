@@ -1,0 +1,12 @@
+<div id='nav-bar-admin'>
+  <div id="homepage">
+    <%= button_to "Homepage", root_path, method: :get, :class => 'submit-buttons' %>
+  </div>
+    <div id="dashboard">
+    <%= button_to "Go to Dashboard", '/admin/dashboard', method: :get, :class => 'submit-buttons' %>
+  </div>
+  <div id="logout">
+    <%= button_to "Logout", '/admin/session', method: :delete, :class => 'submit-buttons' %>
+  </div>
+</div>
+

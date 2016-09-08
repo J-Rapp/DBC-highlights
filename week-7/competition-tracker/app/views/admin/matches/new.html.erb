@@ -1,0 +1,34 @@
+<%= render 'admin/homepage_logout_nav_bar' %>
+
+<h1>Create a new match in league <%= @current_league.name %></h1>
+<div>
+
+  <% if @match.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@match.errors.count, "error") %> prohibited this match from being saved:</h2>
+
+      <ul>
+      <% @match.errors.full_messages.each do |message| %>
+        <li class="error-message"><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form_for @match, url: {action: "create"}, html: {id: "create_match_form"} do |f| %>
+  <div>
+    <p class='in_one_line_form'><%= f.label :round_number%>:</p>
+    <p class='in_one_line_form'><%= f.select :round_number, @round_options %></p>
+  </div>
+  <div>
+    <p class='in_one_line_form'><%= f.label :first_competitor%>:</p>
+    <p class='in_one_line_form'><%= f.select :competitor_one_id, @competitor_options, {include_blank: 'None'} %></p>
+  </div>
+  <div>
+    <p class='in_one_line_form'><%= f.label :second_competitor%>:</p>
+    <p class='in_one_line_form'><%= f.select :competitor_two_id, @competitor_options, {include_blank: 'None'} %></p>
+  </div>
+
+  <%= f.submit "Create Match", :class => 'submit-buttons', :id => 'create-match-button' %>
+  <% end %>
+</div>

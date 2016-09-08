@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CompetitionTracker</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header id="main-header">
+      <h1 id="index-title">Seattle Karate Leagues</h1>
+      <div id='fish'><%=image_tag("animated-tropical-fish-4.gif", alt: "Tropical Fish")%></div>
+    </header>
+
+    <div class="content-container">
+      <%= yield %>
+    </div>
+    <footer id="main-footer">
+       <p id="footer">Competition Tracker is the property of George Williams Rutherford IV | &copy; 2016 | All Rights Reserved</p>
+    </footer>
+  </body>
+</html>

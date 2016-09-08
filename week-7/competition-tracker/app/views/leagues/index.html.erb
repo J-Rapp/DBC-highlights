@@ -1,0 +1,80 @@
+<h1>Current Standings</h1>
+
+<div id="table-container">
+  <div id="league-A-container">
+    <h3><%= @league1.name %></h3>
+    <table class="league-table">
+      <thead>
+        <tr>
+          <th>Player</th>
+            <% i = 0 %>
+            <% while i < @league1.number_of_rounds do %>
+            <th class="col-details">
+              <%= i += 1 %>
+            </th>
+            <% end %>
+          <th class="col-details">Wins</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @league1.competitors.all.each do |competitor| %>
+          <tr>
+            <td class="competitor-name">
+            <%= competitor.name %>
+            </td>
+            <% @league1.number_of_rounds.times do |round| %>
+
+              <td class="col-details">
+                <%= competitor.results[:"r#{round + 1}"] || '-' %>
+              </td>
+
+            <% end %>
+            <td>
+              <%= competitor.wins.count %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="league-B-container">
+    <h3><%= @league2.name %></h3>
+    <table class="league-table">
+      <thead>
+        <tr>
+          <th>Player</th>
+            <% i = 0 %>
+            <% while i < @league2.number_of_rounds do %>
+            <th class="col-details">
+              <%= i += 1 %>
+            </th>
+            <% end %>
+          <th class="col-details">Wins</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @league2.competitors.all.each do |competitor| %>
+          <tr>
+            <td class="competitor-name">
+            <%= competitor.name %>
+            </td>
+            <% @league1.number_of_rounds.times do |round| %>
+
+              <td class="col-details">
+                <%= competitor.results[:"r#{round + 1}"] || '-' %>
+              </td>
+
+            <% end %>
+            <td>
+              <%= competitor.wins.count %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+
+  </div>
+</div>
+
