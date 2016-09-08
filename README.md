@@ -1,8 +1,10 @@
 # DBC Exercises
-##Select projects from my nine weeks of on-site at Dev Bootcamp. 
-* All projects are copied from the cohort's private repository, and are representative of my GitHub activity from June thru August of 2016. 
-* Some of the learning exercises were pair-programmed or group projects, but a majority are all solo work. 
-* Below accounts for (a very rough estimate of) 50% of the drills and exercises accomplised at DBC during those 9-weeks.
+##Select projects from my nine weeks of on-site at Dev Bootcamp.  
+* Below accounts for (a very rough estimate of) 50% of the drills and exercises accomplised at DBC during those 9-weeks.  
+* All projects are copied from the cohort's private repository, and are representative of my GitHub activity from June thru August of 2016.  
+* Some of the learning exercises were pair-programmed or group projects, but a majority are all solo work.  
+* This compilation is currently a work in progress
+
 
 ---
 
