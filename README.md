@@ -7,7 +7,9 @@
 ---
 
 ##Front-end
->* [2048 Clone](./week-8/256-challenge) `complex boardgame logic`, `object-oriented javascript`
+>* [Mini-Twitter](./week-8/mini-twitter) `AJAX`, `jQuery`, `object-oriented javascript`
+>* [2048 Clone](./week-8/256-challenge) `complex boardgame logic`, `object-oriented javascript`, `jasmine`
+>* [Simple Markdown Converter] (./week-8/markdown-widget) `object-oriented javascript`, `jasmine`
 
 ---
 
@@ -33,13 +35,13 @@
 
 ---
 
-## Object Oriented Programming
+##Object Oriented Programming
 >* [Orange Trees](./week-2/orange-trees-1) `OO design`, `rspec`
 >* [Ruby Flashcards](./week-2/flashcards) `OOP and design`, `rspec`
 
 ---
 
-## Cumulative Assessments
+##Cumulative Assessments
 >* [Phase 1](./week-2/assessment) `algorithms`, `OOP and design`, `rspec`
 
 ---
